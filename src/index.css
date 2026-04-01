@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    cursor: none !important;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0f;
+    color: #e2e2f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f0f1a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00f5ff44;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00f5ff88;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-[#13131f] border border-[#1e1e2e] rounded-xl p-6 backdrop-blur-sm;
+  }
+
+  .cyber-btn-primary {
+    @apply bg-[#00f5ff] text-[#0a0a0f] font-semibold px-6 py-3 rounded-lg 
+           hover:shadow-[0_0_20px_rgba(0,245,255,0.4)] transition-all duration-300 
+           hover:scale-105 active:scale-95;
+  }
+
+  .cyber-btn-outline {
+    @apply border border-[#00f5ff] text-[#00f5ff] font-semibold px-6 py-3 rounded-lg 
+           hover:bg-[#00f5ff] hover:text-[#0a0a0f] transition-all duration-300
+           hover:shadow-[0_0_20px_rgba(0,245,255,0.3)];
+  }
+
+  .cyber-input {
+    @apply w-full bg-[#0f0f1a] border border-[#1e1e2e] text-[#e2e2f0] rounded-lg px-4 py-3 
+           font-mono text-sm outline-none transition-all duration-300
+           focus:border-[#00f5ff] focus:shadow-[0_0_0_2px_rgba(0,245,255,0.1)]
+           placeholder:text-[#4a4a6a];
+  }
+
+  .glow-text {
+    color: #00f5ff;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#00f5ff] to-[#7c3aed] bg-clip-text text-transparent;
+  }
+}
