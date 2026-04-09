@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Globe, Clock, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import api from '../api';
+import { toolsApi as api } from '../api';
 
 const Dashboard = () => {
   const { user } = useAuth();
