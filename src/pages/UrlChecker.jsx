@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Shield, AlertTriangle, CheckCircle, XCircle, Search } from 'lucide-react';
-import api from '../api';
+import { toolsApi as api } from '../api';
 
 const UrlChecker = () => {
   const [url, setUrl] = useState('');

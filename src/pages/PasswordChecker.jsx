@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, Eye, EyeOff, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
-import api from '../api';
+import { toolsApi as api } from '../api';
 
 const PasswordChecker = () => {
   const [password, setPassword] = useState('');
