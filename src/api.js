@@ -1,11 +1,11 @@
-// src/api.js — axios instance that connects to our backend
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL 
+    ? `${import.meta.env.VITE_API_URL}/api/auth`
+    : 'http://localhost:5000/api/auth',
 });
 
-// Automatically attach JWT token to every request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
